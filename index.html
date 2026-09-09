@@ -93,18 +93,21 @@
                 <h1 class="entete-secondaire__titre-principale titre-pricipale">Chaussures</h1>
                 <p class="entete-secondaire__nombres-produits">12 produits</p>
                 <div class="entete-secondaire__sorte-chaussure">
-                    <div class="sorte-chaussure__btn-sorte-actif btn-sorte-actif">Tous</div>
-                    <div class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Hommes</div>
-                    <div class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Femems</div>
-                    <div class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Enfants</div>
+                    <button class="sorte-chaussure__btn-sorte-actif btn-sorte-actif">Tous</button>
+                    <button class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Hommes</button>
+                    <button class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Femems</button>
+                    <button class="sorte-chaussure__btn-sorte-initial btn-sorte-initial">Enfants</button>
                 </div>
             </div>
             <div class="contenu-principal__section-info-filtres">
               <button class="section-info-filtres__btn-filtres">Masquer les filtres</button>
-              <label for="tirer" class="section-info-filtres__label">Trier par</label>
-              <select name="trier" id="trier" class="section-info-filtres__menu-select">
-                <option value="nouvautes">Nouveautés</option>
-              </select>
+              <form action="">
+                <label for="tirer" class="section-info-filtres__label">Trier par</label>
+                <select name="trier" id="trier" class="section-info-filtres__menu-select">
+                    <option value="nouvautes">Nouveautés</option>
+                </select>
+              </form>
+              
             </div>
             <ul class="contenu-principal__section-chaussures">
               <li class="section-chaussures__carte carte-chaussure-nouveau">
