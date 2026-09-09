@@ -11,7 +11,7 @@
         <header>
             <nav class="nav-menu" aria-label="Navigation principale">
                 <div class="nav-menu__logo">
-                    <p class="logo__texte">FOULÉE</p>
+                    FOULÉE
                 </div>
 
                 <!-- Bouton Menu / Fermer -->
@@ -42,11 +42,45 @@
                         <a href="#contact" class="nav-menu__link">Foulée +</a>
                     </li>
                 </ul>
+                <!-- Le rôle search indique aux lecteurs d'écran qu'il s'agit de la recherche principale -->
+                <form
+                action="pageCourante.php"
+                method="GET"
+                role="search" 
+                class="barre-recherche"
+                >
+                    <!-- Label obligatoire pour l'accessibilité, masqué visuellement en CSS --> 
+                    <label for="recherche-principale" class="sr-only">
+                        Rechercher sur le site
+                    </label>
+
+                    <!-- input type="search" ajoute nativement un bouton "X" pour effacer la saisie -->
+                    <input
+                    type="search" 
+                    id="recherche-principale"
+                    name=" q"
+                    placeholder="Rechercher" 
+                    class="barre-recherche_champ"
+                    />
+
+                    <!-- Le bouton de soumission contient l'icône de la loupe -->
+                    <button
+                    type="submit" 
+                    class="barre-recherche_bouton"
+                    aria-label="Lancer la recherche"
+                    >
+                        <!-- Icône SVG decorative (masquée aux lecteurs d'écran car le bouton a déjà un aria-label) -->
+                        <img
+                        aria-hidden="true"
+                        focusable="false"
+                        viewBox="0 0 24 24"
+                        width="16" 
+                        height="16"
+                        src="images/svg/Loupe.svg" 
+                        alt="Loupe"/>
+                    </button>
+                </form>
                 <div class="partie-droite">
-                    <div class="partie_droite__bar-recherche">
-                        <p class="bar-recherche__texte">Recherche</p>
-                        <img src="images/svg/Loupe.svg" alt="Loupe" />
-                    </div>
                     <div class="partie-droite__panier">
                         <img src="images/svg/Panier.svg" alt="Panier" />
                     </div>
@@ -72,8 +106,8 @@
                 <option value="nouvautes">Nouveautés</option>
               </select>
             </div>
-            <div class="contenu-principal__section-chaussures">
-              <div class="section-chaussures__carte carte-chaussure-nouveau">
+            <ul class="contenu-principal__section-chaussures">
+              <li class="section-chaussures__carte carte-chaussure-nouveau">
                 <div class="carte__nouveau">
                   Nouveau
                 </div>
@@ -97,8 +131,8 @@
                 <div class="carte__btn-ajout-panier">
                     Ajouter au panier
                 </div>
-              </div>
-            </div>
+              </li>
+            </ul>
         </main>
     </body>
 </html>
