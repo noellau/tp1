@@ -1,0 +1,28 @@
+/************************/
+/* a11y - Accessibilité */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%); /* Remplace clip: rect() */
+  white-space: nowrap; /* Empêche les sauts de ligne invisibles et bizarres */
+  border: 0;
+}
+
+/* pour faire apparaitre au focus les liens d'évitement comme"Aller au contenu" */
+.sr-only-focusable:active,
+.sr-only-focusable:focus-within {
+  /* focus-within est plus robuste que focus seul */
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: 0;
+  overflow: visible;
+  clip-path: none;
+  white-space: normal;
+}
