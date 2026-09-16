@@ -23,7 +23,18 @@
 /* @import url("css/components/accordeon.css") layer(components); */
 /* @import url("css/components/modale.css") layer(components); */
 
-/* Temporaire - Pour tester une variable définie dans les settings */
-h1 {
-  color: var(--couleur-principale);
-}
+/**** TABLE DES MATIÈRES ****/
+/*
+    HEADER
+        Barre de recherche
+
+    CONTENU PRINCIPAL
+        
+
+    MEDIA QUERIES
+        Table
+*/
+
+/** HEADER **/
+/* Barre de recherche */
+
