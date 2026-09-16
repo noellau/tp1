@@ -37,4 +37,25 @@
 
 /** HEADER **/
 /* Barre de recherche */
+  .barre-recherche {
+      display: flex;
+      max-width: 12rem;
+      margin: 0;
+  }
 
+  #recherche-principale {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-right: none; /* Colle le champ au bouton */
+      border-radius: 1rem;
+      background-color: var(--gris-fonce);
+      color: white;
+  }
+
+  /* STYLE CRUCIAL : Améliore le contour de sélection lors de la navigation au clavier (Touche Tab) */
+  #recherche-principale:focus,
+  button:focus-visible {
+      outline: 3px solid var(--bleu-flash);
+      outline-offset: -1px;
+  }
