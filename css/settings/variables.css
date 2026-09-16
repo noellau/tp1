@@ -1,5 +1,11 @@
 /* VARIABLES */
 
 :root {
-  --couleur-principale: rgb(62, 3, 118);
+  --bleu-flash: #0190D2;
+  --bleu-fonce: #101727;
+  --bleu-gris: #5F6774;
+  --gris-fonce: #2A2A2A;
+  --gris-pale: #F5F5F5;
+  --gris-accent: #DDDDDD;
+  --noir: #000000;
 }
