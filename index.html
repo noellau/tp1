@@ -40,26 +40,36 @@
                         <a href="#contact" class="nav-menu__link">Foulée +</a>
                     </li>
                 </ul>
-                <!-- Le rôle search indique aux lecteurs d'écran qu'il s'agit de la recherche principale -->
-                <form action="pageCourante.php" method="GET" role="search" class="barre-recherche">
-                    <!-- Label obligatoire pour l'accessibilité, masqué visuellement en CSS -->
-                    <label for="recherche-principale" class="sr-only"> Rechercher sur le site </label>
-
-                    <!-- input type="search" ajoute nativement un bouton "X" pour effacer la saisie -->
-                    <input type="search" id="recherche-principale" name=" q" placeholder="Rechercher" class="barre-recherche_champ" />
-
-                    <!-- Le bouton de soumission contient l'icône de la loupe -->
-                    <button type="submit" class="barre-recherche_bouton" aria-label="Lancer la recherche">
-                        <!-- Icône SVG decorative (masquée aux lecteurs d'écran car le bouton a déjà un aria-label) -->
-                        <img aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="16" height="16" src="images/svg/Loupe.svg" alt="Loupe" />
-                    </button>
-                </form>
                 <div class="partie-droite">
                     <div class="partie-droite__panier">
                         <img src="images/svg/Panier.svg" alt="Panier" />
                     </div>
                 </div>
             </nav>
+            <!-- Le rôle search indique aux lecteurs d'écran qu'il s'agit de la recherche principale -->
+            <form action="pageCourante.php" method="GET" role="search" class="barre-recherche">
+                <!-- Label obligatoire pour l'accessibilité, masqué visuellement en CSS -->
+                <label for="recherche-principale" class="sr-only"> Rechercher sur le site </label>
+
+                <!-- input type="search" ajoute nativement un bouton "X" pour effacer la saisie -->
+                <input type="search" id="recherche-principale" name=" q" placeholder="Rechercher" class="barre-recherche_champ" autocomplete="off" 
+                />
+                <button type="submit" class="barre-recherche_bouton" aria-label="Lancer la recherche">
+                    <!-- L'icône visible -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                        <path
+                            d="M6.41667 11.0833C8.994 11.0833 11.0833 8.994 11.0833 6.41667C11.0833 3.83934 8.994 1.75 6.41667 1.75C3.83934 1.75 1.75 3.83934 1.75 6.41667C1.75 8.994 3.83934 11.0833 6.41667 11.0833Z"
+                            stroke="#99A1AF"
+                            stroke-width="1.16667"
+                        />
+                        <path d="M12.25 12.25L9.71249 9.71252" stroke="#99A1AF" stroke-width="1.16667" stroke-linecap="round" />
+                    </svg>
+                    <!-- Le texte invisible pour les yeux, mais lu à voix haute -->
+                    <span class="sr-only">Rechercher</span>
+                </button>
+
+                <!-- Le bouton de soumission contient l'icône de la loupe -->
+            </form>
         </header>
         <main class="contenu-pricipal">
             <div class="contenu-pricipal__entete-secondaire">
@@ -108,7 +118,7 @@
                         </li>
                     </ul>
                 </li>
-                <hr class="section-filtre__barre">
+                <hr class="section-filtre__barre" />
                 <li class="section-filtre__titre-prix">
                     Prix
                     <ul class="titre-prix__section-prix">
@@ -129,8 +139,8 @@
                             <label for="plus180">Plus de 180$</label>
                         </li>
                     </ul>
-                </li> 
-                <hr class="section-filtre__barre">
+                </li>
+                <hr class="section-filtre__barre" />
                 <li class="section-filtre__titre-couleur">
                     Couleur
                     <ul class="titre-couleur__section-couleur">
@@ -157,10 +167,10 @@
                         <li class="section-couleur__otp5">
                             <input type="checkbox" id="gris" />
                             <label for="gris">Gris</label>
-                        </li>                        
+                        </li>
                     </ul>
-                </li>    
-                <hr class="section-filtre__barre">
+                </li>
+                <hr class="section-filtre__barre" />
                 <li class="section-filtre__titre-pointure">
                     Pointure
                     <ul class="titre-pointure__section-pointure">
@@ -187,26 +197,26 @@
                         <li class="section-pointure__otp5">
                             <input type="checkbox" id="41" />
                             <label for="41">41</label>
-                        </li> 
+                        </li>
                         <li class="section-pointure__otp5">
                             <input type="checkbox" id="42" />
                             <label for="42">42</label>
-                        </li> 
+                        </li>
                         <li class="section-pointure__otp5">
                             <input type="checkbox" id="43" />
                             <label for="43">43</label>
-                        </li> 
+                        </li>
                         <li class="section-pointure__otp5">
                             <input type="checkbox" id="44" />
                             <label for="44">44</label>
-                        </li>    
+                        </li>
                         <li class="section-pointure__otp5">
                             <input type="checkbox" id="45" />
                             <label for="45">45</label>
-                        </li>                                                                                                                     
+                        </li>
                     </ul>
                 </li>
-                <hr class="section-filtre__barre">                                               
+                <hr class="section-filtre__barre" />
             </ul>
             <ul class="contenu-principal__section-chaussures">
                 <li class="section-chaussures__carte carte-chaussure-nouveau">
@@ -225,35 +235,27 @@
             </ul>
         </main>
         <footer class="footer">
-            <div class="footer__logo">
-                FOULÉE
-            </div>
+            <div class="footer__logo">FOULÉE</div>
             <nav class="footer__nav">
                 <ul class="nav__list">
-                    <li class="nav__list-item">
-                        Accueil
-                    </li>
-                    <li class="nav__list-item">
-                        À propos
-                    </li>
-                    <li class="nav__list-item">
-                        Support
-                    </li>
-                    <li class="nav__list-item">
-                        Contact
-                    </li>
+                    <li class="nav__list-item">Accueil</li>
+                    <li class="nav__list-item">À propos</li>
+                    <li class="nav__list-item">Support</li>
+                    <li class="nav__list-item">Contact</li>
                 </ul>
             </nav>
             <div class="footer__icones-medias-sociaux">
-                <img src="images/svg/X.svg" alt="Icône X" class="icones-medias-sociaux__x">
-                <img src="images/svg/Facebook.svg" alt="Icône Facebook" class="icones-medias-sociaux__facebook">
-                <img src="images/svg/Dribble.svg" alt="Icône Dribble" class="icones-medias-sociaux__dribble">
+                <img src="images/svg/X.svg" alt="Icône X" class="icones-medias-sociaux__x" />
+                <img src="images/svg/Facebook.svg" alt="Icône Facebook" class="icones-medias-sociaux__facebook" />
+                <img src="images/svg/Dribble.svg" alt="Icône Dribble" class="icones-medias-sociaux__dribble" />
             </div>
             <div class="footer__copyright">
-                © 2017 FOULÉE. <br> Tous droits réservés 2017.
+                © 2017 FOULÉE. <br />
+                Tous droits réservés 2017.
             </div>
             <div class="footer__description">
-                FOULÉE est une boutique spécialisée dans la vente de chaussures de sport et de lifestyle. Nous offrons une sélection soigneusement choisie pour hommes, femmes et enfants.
+                FOULÉE est une boutique spécialisée dans la vente de chaussures de sport et de lifestyle. Nous offrons une sélection soigneusement
+                choisie pour hommes, femmes et enfants.
             </div>
         </footer>
     </body>
