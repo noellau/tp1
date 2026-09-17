@@ -13,7 +13,7 @@
 /* Dossier : css/base/ */
 @import url("css/base/normalize.css") layer(base);
 @import url("css/base/a11y.css") layer(base);
-/* @import url("css/base/typography.css") layer(base); */
+@import url("css/base/typography.css") layer(base);
 
 /* Dossier : css/layout/ */
 /* @import url("css/layout/grid.css") layer(layout); */
@@ -37,13 +37,18 @@
 
 /** HEADER **/
 /* Barre de recherche */
-  .barre-recherche {
+  .nav__partie-droite{
+    display: flex;
+    align-items: center;
+    gap:  3rem;
+
+    .barre-recherche {
       display: flex;
       max-width: 12rem;
       margin: 0;
-  }
-
-  #recherche-principale {
+    }
+    
+    #recherche-principale {
       flex: 1;
       padding: 0.5rem 1rem;
       font-size: 1rem;
@@ -51,11 +56,12 @@
       border-radius: 1rem;
       background-color: var(--gris-fonce);
       color: white;
-  }
-
-  /* STYLE CRUCIAL : Améliore le contour de sélection lors de la navigation au clavier (Touche Tab) */
-  #recherche-principale:focus,
-  button:focus-visible {
+    }
+    
+    /* STYLE CRUCIAL : Améliore le contour de sélection lors de la navigation au clavier (Touche Tab) */
+    #recherche-principale:focus,
+    button:focus-visible {
       outline: 3px solid var(--bleu-flash);
       outline-offset: -1px;
+    }
   }
