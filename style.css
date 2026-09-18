@@ -115,4 +115,39 @@
         pointer-events: none; /* Désactive le clic sur la page active */
         text-decoration: none;
     }
+
+    .entete-secondaire__sorte-chaussure {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+
+        .sorte-chaussure__btn-sorte {
+            display: flex;
+            height: 1.875rem;
+            padding: 0.625rem 0.96875rem;
+            justify-content: center;
+            align-items: center;
+            gap: 0.625rem;
+            border: 1px solid var(--gris-accent);
+            background: var(--blanc);
+        }
+
+        .sorte-chaussure__btn-sorte:hover {
+            color: var(--blanc);
+            background: var(--noir);
+            border: 1px solid var(--noir);
+        }
+
+        .sorte-chaussure__btn-sorte:active {
+            color: var(--blanc);
+            background: var(--gris-fonce);
+            border: 1px solid var(--gris-fonce);
+        }
+
+        .btn-sorte-actif {
+            color: var(--blanc);
+            background: var(--noir);
+            border: 1px solid var(--noir);
+        }
+    }
 }
