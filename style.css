@@ -29,39 +29,90 @@
         Barre de recherche
 
     CONTENU PRINCIPAL
-        
+        Entête secondaire
 
     MEDIA QUERIES
         Table
 */
 
-/** HEADER **/
-/* Barre de recherche */
-  .nav__partie-droite{
+/*** HEADER ***/
+/** Barre de recherche **/
+.nav__partie-droite {
     display: flex;
     align-items: center;
-    gap:  3rem;
+    gap: 3rem;
 
     .barre-recherche {
-      display: flex;
-      max-width: 12rem;
-      margin: 0;
+        display: flex;
+        max-width: 12rem;
+        margin: 0;
     }
-    
+
     #recherche-principale {
-      flex: 1;
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border-right: none; /* Colle le champ au bouton */
-      border-radius: 1rem;
-      background-color: var(--gris-fonce);
-      color: white;
+        flex: 1;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border-right: none;
+        border-radius: 1rem;
+        background-color: var(--gris-fonce);
+        color: white;
     }
-    
-    /* STYLE CRUCIAL : Améliore le contour de sélection lors de la navigation au clavier (Touche Tab) */
+
     #recherche-principale:focus,
     button:focus-visible {
-      outline: 3px solid var(--bleu-flash);
-      outline-offset: -1px;
+        outline: 3px solid var(--bleu-flash);
+        outline-offset: -1px;
     }
-  }
+}
+/*** CONTENU PRINCIPAL ***/
+/** Entête secondaire **/
+.contenu-pricipal__entete-secondaire {
+    /* Pour le fil d'ariane */
+    /* Conteneur principal */
+    .entete-secondaire__fil {
+        padding: 10px 0;
+        font-size: 0.9rem;
+    }
+
+    /* Liste des liens */
+    .entete-secondaire__fil ul {
+        display: flex;
+        flex-wrap: wrap; /* Permet le retour à la ligne sur mobile */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Éléments de la liste */
+    .entete-secondaire__fil li {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Séparateur visuel (ignoré par les lecteurs d'écran) */
+    .entete-secondaire__fil li:not(:last-child)::after {
+        content: ">";
+        margin: 0 12px;
+        color: var(--noir);
+    }
+
+    /* Style des liens cliquables */
+    .entete-secondaire__fil a {
+        color: var(--noir);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    /* Effet au survol des liens */
+    .entete-secondaire__fil a:hover {
+        color: var(--bleu-flash);
+        text-decoration: underline;
+    }
+
+    /* Style de la page actuelle (élément actif) */
+    .entete-secondaire__fil [aria-current="page"] {
+        color: var(--noir);
+        pointer-events: none; /* Désactive le clic sur la page active */
+        text-decoration: none;
+    }
+}
