@@ -1,5 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root{
-    font-family: 'Barlow', Tahoma, Geneva, Verdana, sans-serif;
+:root {
+    font-family: "Barlow", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: "Barlow Condensed";
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--bleu-fonce);
+    letter-spacing: 0.02rem;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Condensed";
+    font-size: 1.0625rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--bleu-fonce);
+}
+
+.nav {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.fil {
+    font-size: 0.75rem;
+}
+
+.filtre-titre {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.filtre-option {
+    font-size: 1rem;
+    letter-spacing: -0.06rem;
+    font-weight: 500;
+}
+
+.genre{
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    text-transform: uppercase;
+}
+
+.plus-info {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.prix {
+    font-size: 0.875rem;
+    font-weight: 500;
 }
