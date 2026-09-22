@@ -71,7 +71,6 @@
     /* Conteneur principal */
     .entete-secondaire__fil {
         padding: 10px 0;
-        font-size: 0.9rem;
     }
 
     /* Liste des liens */
@@ -149,5 +148,58 @@
             background: var(--noir);
             border: 1px solid var(--noir);
         }
+    }
+}
+
+/** Section info filtres **/
+.contenu-principal__section-info-filtres{
+
+    .section-info-filtres__btn-filtres{
+        color: var(--bleu-fonce);
+        border: 0;
+        padding: 0;
+        background-color: var(--blanc);
+    }
+}
+
+/** Filtres **/
+/* Masquage accessible du formulaire entier */
+.is-hidden {
+    display: none;
+}
+
+.contenu-pricipal__form-filtre{
+    width: 13rem;    
+
+    .form-filtre__section-filtre {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        
+        .filtre-titre{
+            margin-top: 1.31rem;
+            margin-bottom: 0.25rem;
+            color: var(--bleu-fonce);
+
+            .section-option{
+                list-style: none;
+                margin: 0;
+                padding-left: 0;
+
+                .filtre-option{
+                    margin: 0.56rem 0   ;
+                    color: var(--bleu-gris);
+                }
+            }
+        }
+
+        .section-filtre__barre{
+            margin-top: 0.25rem;
+        }
+    }
+}
+@media (width > 60.8125rem) {
+    .form-filtre__section-filtre {
+        margin: 0 0;
     }
 }
