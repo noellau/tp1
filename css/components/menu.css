@@ -3,23 +3,11 @@
 @layer components {
   /* 1. ARCHITECTURE DESKTOP */
   .nav-menu {
-    --nav-bg: #000;
-    --nav-text: #fff;
-    --nav-accent: #0190D2;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--noir);
     padding: 1rem 2rem;
-
-    .nav-menu__logo{
-      font-family: 'Barlow Condensed', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 900;
-      font-size: 1.375rem;
-      letter-spacing: 0.09rem;
-      color: var(--nav-text); 
-    }
 
     .nav-menu__list {
       display: flex;
@@ -30,7 +18,7 @@
     }
 
     .nav-menu__link {
-      color: var(--nav-text);
+      color: var(--blanc);
       text-decoration: none;
       font-weight: 500;
       padding: 0.5rem 0.25rem;
@@ -40,15 +28,15 @@
         border-color 0.25s ease;
 
       &:hover {
-        color: var(--nav-accent);
-        border-color: var(--nav-accent);
+        color: var(--bleu-flash);
+        border-color: var(--bleu-flash);
       }
 
       /* WCAG Accessibilité : Indicateur de focus clavier personnalisé et très visible */
       &:focus-visible {
-        outline: 3px solid var(--nav-accent);
+        outline: 3px solid var(--bleu-flash);
         outline-offset: 2px;
-        color: var(--nav-accent);
+        color: var(--bleu-flash);
       }
     }
 
@@ -62,7 +50,7 @@
       padding: 0.6rem 1rem;
       align-items: center;
       gap: 0.75rem;
-      color: var(--nav-text);
+      color: var(--blanc);
       font-weight: 600;
       font-size: 1rem;
       transition:
@@ -75,8 +63,8 @@
 
       &:focus-visible {
         outline: none;
-        border-color: var(--nav-text);
-        box-shadow: 0 0 0 3px var(--nav-accent);
+        border-color: var(--blanc);
+        box-shadow: 0 0 0 3px var(--bleu-flash);
       }
     }
 
@@ -148,7 +136,7 @@
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--nav-bg);
+        background-color: var(--noir);
         border-top: 1px solid rgba(0, 0, 0, 0.08);
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         padding: 1rem 0;
@@ -176,7 +164,7 @@
         &:hover,
         &:focus-visible {
           background-color: rgba(0, 102, 204, 0.05);
-          border-left-color: var(--nav-accent);
+          border-left-color: var(--bleu-flash);
         }
       }
 
