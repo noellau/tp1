@@ -23,20 +23,24 @@
 /* @import url("css/components/accordeon.css") layer(components); */
 /* @import url("css/components/modale.css") layer(components); */
 
-/**** TABLE DES MATIÈRES ****/
+/***** TABLE DES MATIÈRES *****/
 /*
     HEADER
         Barre de recherche
 
     CONTENU PRINCIPAL
         Entête secondaire
+        Section info filtres
+        Section pricipal
+            Filtres
+            Cartes
 
     MEDIA QUERIES
         Table
 */
 
-/*** HEADER ***/
-/** Barre de recherche **/
+/**** HEADER ****/
+/*** Barre de recherche ***/
 .nav__partie-droite {
     display: flex;
     align-items: center;
@@ -64,8 +68,8 @@
         outline-offset: -1px;
     }
 }
-/*** CONTENU PRINCIPAL ***/
-/** Entête secondaire **/
+/**** CONTENU PRINCIPAL ****/
+/*** Entête secondaire ***/
 .contenu-pricipal__entete-secondaire {
     padding-top: 1.31rem;
     padding-bottom: 1.56rem;
@@ -116,7 +120,7 @@
         text-decoration: none;
     }
 
-    .entete-secondaire__nombres-produits{
+    .entete-secondaire__nombres-produits {
         margin: 0;
         padding: 0;
         font-size: 0.9375rem;
@@ -136,38 +140,38 @@
             justify-content: center;
             align-items: center;
             gap: 0.625rem;
-            border: 1px solid var(--gris-accent);
+            border: 0.0625rem solid var(--gris-accent);
             background: var(--blanc);
         }
 
         .sorte-chaussure__btn-sorte:hover {
             color: var(--blanc);
             background: var(--noir);
-            border: 1px solid var(--noir);
+            border: 0.0625rem solid var(--noir);
         }
 
         .sorte-chaussure__btn-sorte:active {
             color: var(--blanc);
             background: var(--gris-fonce);
-            border: 1px solid var(--gris-fonce);
+            border: 0.0625rem solid var(--gris-fonce);
         }
 
         .btn-sorte-actif {
             color: var(--blanc);
             background: var(--noir);
-            border: 1px solid var(--noir);
+            border: 0.0625rem solid var(--noir);
         }
     }
 }
 
-/** Section info filtres **/
-.contenu-principal__section-info-filtres{
+/*** Section info filtres ***/
+.contenu-principal__section-info-filtres {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.75rem;
 
-    .section-info-filtres__btn-filtres{
+    .section-info-filtres__btn-filtres {
         color: var(--bleu-fonce);
         border: 0;
         padding: 0;
@@ -175,44 +179,118 @@
     }
 }
 
-/** Filtres **/
-/* Masquage accessible du formulaire entier */
-.is-hidden {
-    display: none;
-}
+/*** Section principal ***/
+.contenu-pricipal__section-principal {
+    background-color: var(--gris-pale);
+    border-bottom: 0.0625rem solid var(--gris-accent);
+    border-top: 0.0625rem solid var(--gris-accent);
 
-.contenu-pricipal__form-filtre{
-    width: 13rem;    
+    /** Filtres **/
+    /* Masquage accessible du formulaire entier */
+    .is-hidden {
+        display: none;
+    }
 
-    .form-filtre__section-filtre {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        
-        .filtre-titre{
-            margin-top: 1.31rem;
-            margin-bottom: 0.25rem;
-            color: var(--bleu-fonce);
+    .contenu-pricipal__form-filtre {
+        width: 13rem;
+        margin: auto;
 
-            .section-option{
-                list-style: none;
-                margin: 0;
-                padding-left: 0;
+        .form-filtre__section-filtre {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
 
-                .filtre-option{
-                    margin: 0.56rem 0   ;
+            .filtre-titre {
+                margin-top: 1.31rem;
+                margin-bottom: 0.25rem;
+                color: var(--bleu-fonce);
+
+                .section-option {
+                    list-style: none;
+                    margin: 0;
+                    padding-left: 0;
+
+                    .filtre-option {
+                        margin: 0.56rem 0;
+                        color: var(--bleu-gris);
+                    }
+                }
+            }
+
+            .section-filtre__barre {
+                margin-top: 0.25rem;
+            }
+        }
+    }
+
+    /** Cartes **/
+    .contenu-principal__section-cartes {
+        .section-cartes__cartes {
+            list-style: none;
+            width: 260px;
+            margin: auto;
+
+            .cartes__infos {
+                background-color: var(--blanc);
+                padding: 1.25rem 0.625rem 0.625rem 0.625rem;
+
+                .infos__nombre-couleurs {
                     color: var(--bleu-gris);
                 }
             }
-        }
 
-        .section-filtre__barre{
-            margin-top: 0.25rem;
+            .item__nouveau {
+                display: flex;
+                width: 4.125rem;
+                padding: 0.625rem;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--noir);
+                color: var(--blanc);
+                position: absolute;
+                margin-left: 0.75rem;
+            }
+
+            .cartes__btn-ajout-panier {
+                border: 0.125rem solid var(--gris-accent);
+                background: var(--blanc);
+                width: 100%;
+                padding: 0.62rem;
+            }
+
+            .cartes__btn-ajout-panier:hover {
+                color: var(--blanc);
+                background: var(--noir);
+                border: 0.125rem solid var(--noir);
+            }
+
+            .cartes__btn-ajout-panier:active {
+                color: var(--blanc);
+                background: var(--gris-fonce);
+                border: 0.125rem solid var(--gris-fonce);
+            }
         }
     }
 }
+
 @media (width > 60.8125rem) {
-    .form-filtre__section-filtre {
-        margin: 0 0;
+    .contenu-pricipal__section-principal {
+        display: flex;
+        
+        .contenu-pricipal__form-filtre {
+            margin: 0;
+        }
+
+        .contenu-principal__section-cartes {
+            margin-left: 1.9375rem;
+
+            .section-cartes__cartes {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto auto auto;    
+                column-gap: 0.9375rem;
+                row-gap: 1.6875rem;          
+            }
+        }
     }
 }

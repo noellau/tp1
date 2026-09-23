@@ -53,6 +53,7 @@ h2 {
     font-weight: 600;
     letter-spacing: 0.02rem;
     text-transform: uppercase;
+    color: var(--bleu-flash);
 }
 
 .plus-info {
