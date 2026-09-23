@@ -162,6 +162,10 @@
 
 /** Section info filtres **/
 .contenu-principal__section-info-filtres{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
 
     .section-info-filtres__btn-filtres{
         color: var(--bleu-fonce);
