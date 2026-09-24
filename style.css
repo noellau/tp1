@@ -73,8 +73,7 @@
 /**** CONTENU PRINCIPAL ****/
 /*** Entête secondaire ***/
 .contenu-pricipal__entete-secondaire {
-    padding-top: 1.31rem;
-    padding-bottom: 1.56rem;
+    padding: 1.5rem 2.5rem;
     background-color: var(--gris-pale);
     border-bottom: 0.0625rem solid var(--gris-accent);
 
@@ -171,7 +170,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.75rem;
+    padding: 0.75rem 2.5rem;
 
     .section-info-filtres__btn-filtres {
         color: var(--bleu-fonce);
@@ -186,6 +185,7 @@
     background-color: var(--gris-pale);
     border-bottom: 0.0625rem solid var(--gris-accent);
     border-top: 0.0625rem solid var(--gris-accent);
+    padding: 2.5rem;
 
     /** Filtres **/
     /* Masquage accessible du formulaire entier */
@@ -195,16 +195,17 @@
 
     .contenu-pricipal__form-filtre {
         width: 13rem;
-        margin: auto;
+        margin: 0 auto;
 
         .form-filtre__section-filtre {
+            display: flex;
+            flex-direction: column;
+            gap: 1.31rem;
             list-style: none;
             padding: 0;
             margin: 0 auto;
 
             .filtre-titre {
-                margin-top: 1.31rem;
-                margin-bottom: 0.25rem;
                 color: var(--bleu-fonce);
 
                 .section-option {
@@ -217,10 +218,6 @@
                         color: var(--bleu-gris);
                     }
                 }
-            }
-
-            .section-filtre__barre {
-                margin-top: 0.25rem;
             }
         }
     }
