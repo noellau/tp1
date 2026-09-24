@@ -34,6 +34,7 @@
         Section pricipal
             Filtres
             Cartes
+            Numéros de page
 
     PIED DE PAGE
 
@@ -42,32 +43,54 @@
 */
 
 /**** HEADER ****/
-/*** Barre de recherche ***/
 .nav__partie-droite {
     display: flex;
     align-items: center;
     gap: 3rem;
 
+    /*** Barre de recherche ***/
     .barre-recherche {
         display: flex;
         max-width: 12rem;
         margin: 0;
-    }
-
-    #recherche-principale {
-        flex: 1;
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
-        border-right: none;
-        border-radius: 1rem;
+        align-items: center;
         background-color: var(--gris-fonce);
-        color: white;
+        border-radius: 1rem;
+        padding: 0 1rem 0 0;
+
+        .barre-recherche_champ {
+            flex: 1;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border: none;
+            color: white;
+            background: none;
+            padding: 0.5rem 0 0.5rem 1rem;
+        }
+
+        .barre-recherche_champ:focus,
+        button:focus-visible {
+            outline: 0.1875rem solid var(--bleu-flash);
+            outline-offset: -0.0625rem;
+        }
+
+        .barre-recherche_bouton {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     }
 
-    #recherche-principale:focus,
-    button:focus-visible {
-        outline: 3px solid var(--bleu-flash);
-        outline-offset: -1px;
+    /*** Panier ***/
+    .partie-droite__panier {
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
     }
 }
 /**** CONTENU PRINCIPAL ****/
@@ -97,7 +120,7 @@
     /* Séparateur visuel (ignoré par les lecteurs d'écran) */
     .entete-secondaire__fil li:not(:last-child)::after {
         content: ">";
-        margin: 0 12px;
+        margin: 0 0.75rem;
         color: var(--noir);
     }
 
@@ -143,6 +166,7 @@
             gap: 0.625rem;
             border: 0.0625rem solid var(--gris-accent);
             background: var(--blanc);
+            cursor: pointer;
         }
 
         .sorte-chaussure__btn-sorte:hover {
@@ -183,7 +207,6 @@
 /*** Section principal ***/
 .contenu-pricipal__section-principal {
     background-color: var(--gris-pale);
-    border-bottom: 0.0625rem solid var(--gris-accent);
     border-top: 0.0625rem solid var(--gris-accent);
     padding: 2.5rem;
 
@@ -256,6 +279,7 @@
                 background: var(--blanc);
                 width: 100%;
                 padding: 0.62rem;
+                cursor: pointer;
             }
 
             .cartes__btn-ajout-panier:hover {
@@ -273,11 +297,57 @@
     }
 }
 
+/*** Numéros de page ***/
+.contenu-principal__numeros-page {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4375rem;
+    background-color: var(--gris-pale);
+    padding: 0 0 2.3125rem 0;
+    margin: 0;
+    border-bottom: 0.0625rem solid var(--gris-accent);
+
+    .numeros-page__item {
+        width: 33px;
+        height: 33px;
+        border: 0.125rem solid var(--gris-accent);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .numeros-page__lien {
+            color: var(--noir);
+            text-decoration: none;
+        }
+    }
+
+    .numeros-page__item:hover {
+        background: var(--noir);
+        border: 0.125rem solid var(--noir);
+
+        .numeros-page__lien {
+            color: var(--blanc);
+        }
+    }
+
+    .numeros-page__item--actif {
+        background: var(--noir);
+        border: 0.125rem solid var(--noir);
+
+        .numeros-page__lien {
+            color: var(--blanc);
+        }
+    }
+}
+
 /**** PIED DE PAGE ****/
 .footer {
     background-color: var(--gris-fonce);
     color: var(--blanc);
-    padding: 48px 64px;
+    padding: 3rem 4rem;
 
     .footer-nav__list {
         list-style: none;
@@ -290,7 +360,7 @@
                 color: var(--blanc);
                 text-decoration: none;
                 padding: 0.5rem 0.25rem;
-                border-bottom: 2px solid transparent;
+                border-bottom: 0.125rem solid transparent;
                 transition:
                     color 0.25s ease,
                     border-color 0.25s ease;
@@ -301,8 +371,8 @@
                 }
 
                 &:focus-visible {
-                    outline: 3px solid var(--bleu-flash);
-                    outline-offset: 2px;
+                    outline: 0.1875rem solid var(--bleu-flash);
+                    outline-offset: 0.125rem;
                     color: var(--bleu-flash);
                 }
             }
