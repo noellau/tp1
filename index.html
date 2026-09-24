@@ -24,22 +24,22 @@
                 <!-- Liste des liens de navigation -->
                 <ul id="nav-menu-list" class="nav-menu__list">
                     <li class="nav-menu__item">
-                        <a href="#home" class="nav-menu__link nav">Hommes</a>
+                        <a href="#" class="nav-menu__link nav">Hommes</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#services" class="nav-menu__link nav">Femmes</a>
+                        <a href="#" class="nav-menu__link nav">Femmes</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#about" class="nav-menu__link nav">Enfants</a>
+                        <a href="#" class="nav-menu__link nav">Enfants</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#contact" class="nav-menu__link nav">Sport</a>
+                        <a href="#" class="nav-menu__link nav">Sport</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#contact" class="nav-menu__link nav">Personnaliser</a>
+                        <a href="#" class="nav-menu__link nav">Personnaliser</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#contact" class="nav-menu__link nav">Foulée +</a>
+                        <a href="#" class="nav-menu__link nav">Foulée +</a>
                     </li>
                 </ul>
                 <div class="nav__partie-droite">
@@ -123,7 +123,7 @@
                     <span id="texte-btn-filtres">Masquer les filtres</span>
                 </button>
                 <form action="">
-                    <label for="tirer" class="section-info-filtres__label plus-info">Trier par</label>
+                    <label for="trier" class="section-info-filtres__label plus-info">Trier par</label>
                     <select name="trier" id="trier" class="section-info-filtres__menu-select plus-info">
                         <option value="nouvautes">Nouveautés</option>
                     </select>
@@ -374,16 +374,16 @@
                             <picture class="cartes__picture-chaussure">
                                 <source
                                     media="(max-width: 16.25rem)"
-                                    srcset="images/Femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w260.jpg"
+                                    srcset="images/femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w260.jpg"
                                     type="image/jpg"
                                 />
                                 <source
                                     media="(max-width: 32.5rem)"
-                                    srcset="images/Femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w520.jpg"
+                                    srcset="images/femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w520.jpg"
                                     type="image/jpg"
                                 />
                                 <img
-                                    src="images/Femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w260.jpg"
+                                    src="images/femme/ClassicCortezNylonB/wom_ClassicCortezNylonB_01_w260.jpg"
                                     alt="Chaussures Classic Cortez Nylon B"
                                 />
                             </picture>
@@ -420,11 +420,7 @@
                         </li>
                         <li class="cartes__item">
                             <picture class="cartes__picture-chaussure">
-                                <source
-                                    media="(max-width: 16.25rem)"
-                                    srcset="images/femme/AirMaxZero/wom_AirMaxZero_01_w260.jpg"
-                                    type="image/jpg"
-                                />
+                                <source media="(max-width: 16.25rem)" srcset="images/femme/AirMaxZero/wom_AirMaxZero_01_w260.jpg" type="image/jpg" />
                                 <source media="(max-width: 32.5rem)" srcset="images/femme/AirMaxZero/wom_AirMaxZero_01_w520.jpg" type="image/jpg" />
                                 <img src="images/femme/AirMaxZero/wom_AirMaxZero_01_w260.jpg" alt="Chaussures Air Max Zero" />
                             </picture>
@@ -512,7 +508,10 @@
                                     srcset="images/femme/LunarChargeEssential/wom_LunarChargeEssential_01_w520.jpg"
                                     type="image/jpg"
                                 />
-                                <img src="images/femme/LunarChargeEssential/wom_LunarChargeEssential_01_w260.jpg" alt="Chaussures Lunar Charge Essential" />
+                                <img
+                                    src="images/femme/LunarChargeEssential/wom_LunarChargeEssential_01_w260.jpg"
+                                    alt="Chaussures Lunar Charge Essential"
+                                />
                             </picture>
                             <div class="cartes__infos">
                                 <p class="infos__genre genre">femmes</p>
@@ -527,27 +526,31 @@
             </div>
         </main>
         <footer class="footer">
-            <div class="footer__logo logo">FOULÉE</div>
-            <nav class="footer__nav">
-                <ul class="nav__list">
-                    <li class="nav__list-item">Accueil</li>
-                    <li class="nav__list-item">À propos</li>
-                    <li class="nav__list-item">Support</li>
-                    <li class="nav__list-item">Contact</li>
-                </ul>
-            </nav>
-            <div class="footer__icones-medias-sociaux">
-                <img src="images/svg/X.svg" alt="Icône X" class="icones-medias-sociaux__x" />
-                <img src="images/svg/Facebook.svg" alt="Icône Facebook" class="icones-medias-sociaux__facebook" />
-                <img src="images/svg/Dribble.svg" alt="Icône Dribble" class="icones-medias-sociaux__dribble" />
+            <div class="footer__partie-haut">
+                <div class="partie-haut__logo logo">FOULÉE</div>
+                <nav class="partie-haut__nav">
+                    <ul class="footer-nav__list">
+                        <li class="footer-nav__item"><a href="#" class="footer-nav__link nav">Accueil</a></li>
+                        <li class="footer-nav__item"><a href="#" class="footer-nav__link nav">À propos</a></li>
+                        <li class="footer-nav__item"><a href="#" class="footer-nav__link nav">Support</a></li>
+                        <li class="footer-nav__item"><a href="#" class="footer-nav__link nav">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__icones-medias-sociaux">
+                    <img src="images/svg/X.svg" alt="Icône X" class="icones-medias-sociaux__x icones-medias-sociaux" />
+                    <img src="images/svg/Facebook.svg" alt="Icône Facebook" class="icones-medias-sociaux__facebook icones-medias-sociaux" />
+                    <img src="images/svg/Dribble.svg" alt="Icône Dribbble" class="icones-medias-sociaux__dribbble icones-medias-sociaux" />
+                </div>
             </div>
-            <div class="footer__copyright">
-                © 2017 FOULÉE. <br />
-                Tous droits réservés 2017.
-            </div>
-            <div class="footer__description">
-                FOULÉE est une boutique spécialisée dans la vente de chaussures de sport et de lifestyle. Nous offrons une sélection soigneusement
-                choisie pour hommes, femmes et enfants.
+            <div class="footer__partie-bas">
+                <div class="partie-bas__copyright">
+                    © 2017 FOULÉE. <br />
+                    Tous droits réservés 2017.
+                </div>
+                <div class="partie-bas__description">
+                    FOULÉE est une boutique spécialisée dans la vente de chaussures de sport et de lifestyle. Nous offrons une sélection soigneusement
+                    choisie pour hommes, femmes et enfants.
+                </div>
             </div>
         </footer>
     </body>
